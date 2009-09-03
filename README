@@ -1,0 +1,26 @@
+Official WebThumb API Wrapper for PHP5
+
+http://webthumb.bluga.net/
+
+This package requires an API Key, you can get one by registering at
+http://webthumb.bluga.net/register.php
+
+WebThumb is free for light use (100 thumbnails a month)
+Additional thumbnail credits can be purchased for people who need higher volumes
+
+Check out the examples/Webthumb directory for examples on how to use the package
+For examples of option values check out http://webthumb.bluga.net/apidoc
+
+Authors:
+Joshua Eichorn <josh@bluga.net>
+Cal Evans <cal@zend.com>
+################################################################################
+
+
+################################################################################
+Additional Notes:
+
+This code bundles some PEAR2 code and uses an autoloader, The examples will
+run out of the box either from svn or from a Release tarball.
+
+Look at config.php in the examples to see how to include the autoloader
