@@ -270,7 +270,7 @@ class Bluga_Webthumb {
 
         $err = libxml_get_last_error();
         if ($err) {
-            throw new Exception('Invalid XML Payload Returned: '.$err->getMessage());
+            throw new Exception('Invalid XML Payload Returned: '.$err->message);
         }
 
         // version 2 api returns errors as xml check for an xml error message
