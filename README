@@ -20,7 +20,7 @@ Cal Evans <cal@zend.com>
 ################################################################################
 Additional Notes:
 
-This code bundles some PEAR2 code and uses an autoloader, The examples will
-run out of the box either from svn or from a Release tarball.
+This code an uses an autoloader, The examples will
+run out of the box either from git or from a Release tarball.
 
 Look at config.php in the examples to see how to include the autoloader

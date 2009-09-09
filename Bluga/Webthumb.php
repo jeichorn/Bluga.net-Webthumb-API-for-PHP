@@ -45,6 +45,9 @@
  * 1.7 - 02/09/2009 - Josh
  * Lots of bug fixes since the last changelog entry, added failedJobs array for tracking jobs 
  * that don't submit properly
+ * 
+ * 1.8 - 09/09/2009 - Josh
+ * Bug fixes and bring PEAR2 code back in the Bluga namespace
  */
 
 class Bluga_Webthumb {
@@ -216,7 +219,7 @@ class Bluga_Webthumb {
      */
     protected function _transmitRequest($request)
     {
-	    $http = new PEAR2_HTTP_Request($this->webthumbApiEndpoint,$this->httpRequestAdapter);
+	    $http = new Bluga_HTTP_Request($this->webthumbApiEndpoint,$this->httpRequestAdapter);
         $http->requestTimeout = 200;
 	    $http->verb = "POST";
 	    $http->body = $request;

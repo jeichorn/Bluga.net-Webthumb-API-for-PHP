@@ -1,6 +1,5 @@
 <?php
-// require autoloaders for Bluga code and bundled PEAR2 code
-require_once '../../Bluga/PEAR2/Autoload.php';
+// require autoloader for Bluga
 require_once '../../Bluga/Autoload.php';
 
 // Your apikey goes here
