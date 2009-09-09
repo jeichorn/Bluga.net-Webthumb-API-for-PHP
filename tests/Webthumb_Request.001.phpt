@@ -4,6 +4,7 @@ XML Generation Empty Webthumb_Request
 <?php
 require_once '_setup.inc';
 
+Bluga_Webthumb_Request::$USE_PRETTY_PRINT = true;
 $r = new Bluga_Webthumb_Request('apikey');
 echo $r->asXML();
 ?>
@@ -11,4 +12,5 @@ echo $r->asXML();
 <?xml version="1.0"?>
 <webthumb>
   <apikey>apikey</apikey>
+  <version>2</version>
 </webthumb>

@@ -4,6 +4,7 @@ XML Generation All Options filled
 <?php
 require_once '_setup.inc';
 
+Bluga_Webthumb_Request::$USE_PRETTY_PRINT = true;
 $job = new Bluga_Webthumb_Job();
 $job->options->url = "http://bluga.net/test";
 $job->options->outputType = "png";
