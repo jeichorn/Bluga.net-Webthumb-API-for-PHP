@@ -268,6 +268,7 @@ class Bluga_Webthumb {
             echo "#################\n";
         }
 
+        libxml_clear_errors();
         libxml_use_internal_errors(true);
         $xml = new SimpleXMLElement($response->body);
 
