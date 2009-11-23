@@ -18,6 +18,7 @@ try {
 
     // set the size of the custom thumbnail
     $job->options->customThumbnail = array('width' => 1024, 'height' => 1024); 
+    $job->options->fullthumb = 1;
 
     // if your making a lot of requests use notification, set it like
     // $job->options->notify = 'http://example.com/notify.php';

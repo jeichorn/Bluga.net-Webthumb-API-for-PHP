@@ -106,7 +106,7 @@ class Bluga_Webthumb {
     function __construct($apikey = null)
     {
 	    if (!is_null($apikey)) {
-	    	$this->apikey = $apikey;
+	    	$this->apiKey = $apikey;
 	    }
     } // function __construct()
 
