@@ -69,7 +69,6 @@ class Bluga_HTTP_Request_Adapter_Curl extends Bluga_HTTP_Request_Adapter {
         // general stuff
         curl_setopt($this->curl,CURLOPT_BINARYTRANSFER,true);
         curl_setopt($this->curl,CURLOPT_RETURNTRANSFER,true);
-        curl_setopt($this->curl,CURLOPT_FOLLOWLOCATION,true);
 
         // setup a callback to handle header info
         curl_setopt($this->curl,CURLOPT_HEADERFUNCTION,array($this,'_headerCallback'));
