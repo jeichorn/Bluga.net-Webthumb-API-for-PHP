@@ -238,9 +238,10 @@ class Bluga_Webthumb {
         {
             if ($this->debug) {
                 echo "We have a redir, lets figure out where the ApiEndpoint has moved too and try again\n";
-                $this->webthumbApiEndpoint = $response->headers->Location;
-                return $this->_transmitRequest($request);
+                echo "New endoing is: ".$response->headers->Location."\n";
             }
+            $this->webthumbApiEndpoint = $response->headers->Location;
+            return $this->_transmitRequest($request);
         }
         if ($response->code != 200) {
             if ($this->debug)
