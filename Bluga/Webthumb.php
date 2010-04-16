@@ -234,6 +234,14 @@ class Bluga_Webthumb {
         }
 
 		$response = $http->sendRequest();
+        if ($response->code == 302)
+        {
+            if ($this->debug) {
+                echo "We have a redir, lets figure out where the ApiEndpoint has moved too and try again\n";
+                $this->webthumbApiEndpoint = $response->headers->Location;
+                return $this->_transmitRequest($request);
+            }
+        }
         if ($response->code != 200) {
             if ($this->debug)
             {
