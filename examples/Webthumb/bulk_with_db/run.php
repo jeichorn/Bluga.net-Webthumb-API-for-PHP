@@ -1,9 +1,4 @@
 <?php
-// require autoloaders for Bluga code and bundled PEAR2 code
-// You will need to fix these paths if your not running from an svn checkout
-require_once dirname(__FILE__).'/../../../Bluga/PEAR2/Autoload.php';
-require_once dirname(__FILE__).'/../../../Bluga/Autoload.php';
-
 require_once dirname(__FILE__).'/config.php';
 
 // check for a config file in your home dir
@@ -13,14 +8,14 @@ if (file_exists("$home/.webthumb.php")) {
 	include "$home/.webthumb.php";
 }
 
-// setup db connection
-$pdo = new PDO($DB_DSN,$DB_USER,$DB_PASSWORD);
-$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-
 
 // setup a new Webthumb wrapper
 $webthumb = new Bluga_Webthumb();
 $webthumb->setApiKey($APIKEY);
+
+// setup db connection
+$pdo = new PDO($DB_DSN,$DB_USER,$DB_PASSWORD);
+$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
 // query the urls db 
 // you might want to make this more complex

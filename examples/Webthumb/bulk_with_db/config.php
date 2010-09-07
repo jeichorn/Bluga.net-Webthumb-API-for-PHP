@@ -1,4 +1,6 @@
 <?php
+require_once '../../../Bluga/Autoload.php';
+
 // PUT Config here, or you can put it
 // in .webthumb.php in your home dir
 
