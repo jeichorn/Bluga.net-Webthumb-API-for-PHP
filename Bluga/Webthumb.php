@@ -294,7 +294,6 @@ class Bluga_Webthumb {
 
         if (!isset($xml->jobs))
         {
-            var_dump($xml);
             throw new Exception('Unknown response');
         }
 
