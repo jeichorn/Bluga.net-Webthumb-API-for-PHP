@@ -17,7 +17,7 @@ class Bluga_Webthumb_Job {
 			'effect',
 			'delay',
 			'excerpt',
-			'notify'
+			'notify',
 			));
 		$this->options->setters['url'] = create_function('$url','return trim($url);');
 		$this->status = new Bluga_Propertybag(array(
@@ -52,6 +52,21 @@ class Bluga_Webthumb_Job {
 				$xml->$key = '';
 				foreach($value as $k => $v) {
 					$xml->$key->addAttribute($k,$v);
+				}
+				break;
+			case 'notify':
+				if (is_array($value))
+				{
+					$xml->$key = $value['url'];
+					foreach($value as $k => $v) {
+						if ($k == 'url')
+							continue;
+						$xml->$key->addAttribute($k,$v);
+					}
+				}
+				else
+				{
+					$xml->$key = $value;
 				}
 				break;
 			default:
