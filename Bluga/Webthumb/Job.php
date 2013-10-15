@@ -18,6 +18,7 @@ class Bluga_Webthumb_Job {
 			'delay',
 			'excerpt',
 			'notify',
+            'renderer',
 			));
 		$this->options->setters['url'] = create_function('$url','return trim($url);');
 		$this->status = new Bluga_Propertybag(array(
