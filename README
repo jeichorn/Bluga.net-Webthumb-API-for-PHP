@@ -3,7 +3,7 @@ Official WebThumb API Wrapper for PHP5
 http://webthumb.bluga.net/
 
 This package requires an API Key, you can get one by registering at
-http://webthumb.bluga.net/register.php
+http://webthumb.bluga.net/register
 
 WebThumb is free for light use (100 thumbnails a month)
 Additional thumbnail credits can be purchased for people who need higher volumes
