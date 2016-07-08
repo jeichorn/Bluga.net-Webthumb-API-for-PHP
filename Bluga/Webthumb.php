@@ -388,7 +388,7 @@ class Bluga_Webthumb {
         if (!isset($response->headers['Content-Type'])) {
             throw new Exception('No Content-Type in response.');
         }
-        if ($response->headers['Content-Type'] != 'text/xml') {
+        if (!strstr($response->headers['Content-Type'], 'text/xml')) {
             throw new Exception('There was an error. Content-Type returned was '.$response->headers['Content-Type']."\n".$response);
         }
 
